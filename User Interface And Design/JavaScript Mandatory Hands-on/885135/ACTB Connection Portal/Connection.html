@@ -1,0 +1,130 @@
+<html>
+    <head>
+    <style>
+        body{
+            background-color: #EED426;
+            text-align: center;
+        }
+        h1{
+            color: #006666;
+            font-family: Verdana;
+            text-align: center;
+        }
+        
+    </style>  
+    <script>
+        function calculate(){
+            
+                  var rent=document.getElementById("connectiontype").value;
+                  var scheme;
+                  if(document.getElementById("scheme1").checked){
+                      scheme=document.getElementById("scheme1").value;
+                  }else if(document.getElementById("scheme2").checked)
+                  {
+                      scheme=document.getElementById("scheme2").value;
+                  }else if(document.getElementById("scheme3").checked)
+                  {
+                      scheme=document.getElementById("scheme3").value;
+                  }
+                  var duration=document.getElementById("duration").value;
+                  var mr;
+                  var cpm;
+                  var tmrc;
+                  if(rent=="Pre")
+                  {
+                      mr=75;
+                  }else{
+                      mr=150;
+                  }
+                  if(scheme=="Local")
+                  {
+                      cpm=200;
+                  }else if(scheme=="STD")
+                  {
+                      cpm=350;
+                  }else if(scheme=="FullTalkTime")
+                  {
+                      cpm=500;
+                  }
+                  tmrc=(duration*cpm)+mr;
+                  document.getElementById("result").innerHTML="The Total Monthly Rental Cost is Rs. "+tmrc;
+              }
+
+    </script>
+    </head>
+    <body>
+        <h1>ACTB Connection Portal</h1>
+       
+            <table >
+                <tr>
+                    <td>
+                        <label for="custname">Customer Name </label>
+                    </td>
+                    <td><input type="text" id="custname" name="custname" placeholder="Enter the customer name" pattern="([^\s][a-zA-Z\s]+)" required="required"></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="email">Customer Email</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="abc@gmail.com" required="required"></td>
+                </tr>
+                <tr>
+                    <td><label for="mobile">Mobile Number</label></td>
+                    <td><input type="text" id="mobile" name="mobile" placeholder="Enter the Mobile Number" pattern="[7-9][0-9]{9}" required="required"></td>
+                </tr>
+                <tr>
+                    <td><label for="connectiontype">Type of Broadband</label></td>
+                    <td><select name="conntype" id="connectiontype" required="required">
+                        <option value="Pre">Pre</option>
+                        <option value="Post">Post</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="scheme">Scheme Name</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="scheme1" name="scheme" value="Local" required>
+                        <label for="scheme1">Local</label>
+                        <input type="radio" id="scheme2" name="scheme" value="STD" required>
+                        <label for="scheme2">STD</label>
+                        <input type="radio" id="scheme3" name="scheme" value="FullTalkTime" required>
+                        <label for="scheme3">FullTalkTime</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="duration">Connection Duration</label></td>
+                    <td><input type="number" id="duration" name="duration" min="1" max="12" required="required"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="submit" value="Calculate Bill Amount" name="submit" onclick="calculate()"></td>
+                    <td><input type="reset" value="Reset" name="clear"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="result"></div>
+                    </td>
+                </tr>
+            </table>
+            <center>Rental Cost Table</center> 
+            <center>
+            <table id="rentalCostTable" value="rentalcost" border="1">
+                <tr>
+                    <th>Connection Type</th>
+                    <th>Call Limit</th>
+                    <th>Monthly Rental</th>
+                </tr>
+                <tr>
+                    <td>Pre</td>
+                    <td>500</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>Post</td>
+                    <td>Unlimited</td>
+                    <td>150</td>
+                </tr>
+            </table>
+            </center>
+        
+    </body>
+</html>
