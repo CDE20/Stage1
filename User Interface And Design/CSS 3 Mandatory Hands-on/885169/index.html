@@ -1,0 +1,26 @@
+<html>
+	<head>
+    <script src="script.js" type="text/javascript"> </script>
+    <style>
+        p{
+            font-weight: bold;
+            font-size: 20;
+        }
+    </style>
+  </head>
+  <body> 
+    <!-- Fill code here -->
+    <p>Feedback for the ART OF LIVING session</p><br>
+        <label for="feedback">Enter the Feedback:</label>
+        <input id="feedback" name="feedback" height="40" type="text"><br>
+        <input id="create" type="button" value="Add Feedback" onclick="addFeedback()"/><br>
+        <button id="view" type="button" onclick="displayFeedback()">View Feedback</button><br>
+        
+        <div style="display:none; border:thick solid #000000; width:500px" id="result" name="dr">
+            <text style="font-size:20;"><b>Feedback Details</b></text><br>
+            <text id="in" name="dr">Successfully Added Feedback Details!</text>
+        </div>
+
+    
+  </body>
+</html>
