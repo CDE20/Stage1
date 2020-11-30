@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #EED426;
+            }
+            h1{
+                color: #006666;
+                font-family: verdana;
+                text-align: center;
+            }
+            #rentalcost{
+                border-style: solid;
+                border-width: 1px;
+                text-align: center;
+            }
+            #rentalcost th{
+                border-style: solid;
+                border-width: 1px;
+            }
+            #rentalcost td{
+                border-style: solid;
+                border-width: 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ACTB Connection Portal</h1>
+        <center><form onsubmit="return calculateTotalCost()">
+            <table>
+                <tr>
+                    <td><label>Customer Name</label></td>
+                    <td><input type="text" name="custname" placeholder="Enter the customer name" pattern="[A-Za-z][A-Za-z ]*" required="true"></td>
+                </tr>
+                <tr>
+                    <td><label>Customer Email</label></td>
+                    <td><input type="text" placeholder="abc@gmail.com" 
+                    pattern="[A-Za-z][A-Za-z0-9]*[@][a-z.]+" name="email" required="true"></td>
+                </tr>
+                <tr>
+                    <td><label>Mobile Number</label></td>
+                    <td><input name="mobile" type="text" pattern="[7-9][0-9]{9}" 
+                    placeholder="Enter the Mobile Number" required="true"></td>
+                </tr>
+                                <tr>
+                    <td><label>Type of Broadband</label></td>
+                    <td><select name="conntype">
+                        <option id="connectiontype" value="Pre">Pre</option>
+                        <option id="connectiontype" value="Post">Post</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label>Scheme Name</label></td>
+                    <td ><label for="scheme1"><input type="radio" id="scheme1" name="scheme" value="Local" required="required">
+                        Local</label><label for="scheme2"><input type="radio" name="scheme" id="scheme2" value="STD" required="required">
+                        STD</label><label for="scheme3"><input type="radio" id="scheme3" name="scheme" value="FullTalkTime" required="required">
+                        FullTalkTime</label></td>
+                </tr>                
+                <tr>
+                    <td><label>Connection Duration</label></td>
+                    <td><input type="number" name="duration" min="1" max="12" required="true"></td>
+                </tr>
+               <tr>
+                    <td><input name="submit" type="submit" value="Calculate Bill Amount"></td>
+                    <td><input type="reset" name="clear" value="Reset"></td>
+                </tr>
+                <tr><td><div name="result" id="result"></div></td></tr>        
+            </table>
+        </form>
+        </center>
+        
+        
+        <center>
+            <table id="rentalcost">
+                Rental Cost Table
+                <tr>
+                    <th>Connection Type</th>
+                    <th>Call Limit</th>
+                    <th>Monthly Rental</th>
+                </tr>
+                <tr>
+                    <td>Pre</td>
+                    <td>500</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>Post</td>
+                    <td>Unlimited</td>
+                    <td>150</td>
+                </tr>
+            </table>
+        </center>
+        <script>
+            function calculateTotalCost(){
+                var duration = document.getElementsByName("duration")[0];
+                var type = document.getElementsByName("conntype")[0];
+                var total  = 0;
+                if(document.getElementById("scheme1").checked){
+                    total = duration.value * 200;
+                }
+                else if(document.getElementById("scheme2").checked){
+                    total = duration.value * 350;
+                    
+                }
+                else if(document.getElementById("scheme3").checked){
+                    total = duration.value * 500;
+                    
+                }
+                if(type.value == "Pre")
+                    total += 75;
+                else if(type.value == "Post")
+                    total += 150;
+                document.getElementsByName("result")[0].innerHTML = "The Total Monthly Rental Cost is Rs. " + total.toString();
+                return false;
+                
+            }
+        </script>
+    </body>
+</html>
