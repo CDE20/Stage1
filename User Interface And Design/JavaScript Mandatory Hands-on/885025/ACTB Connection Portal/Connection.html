@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+           body{
+               background-color: #EED426;
+               text-align: center;
+           }
+           h1{
+               color: #006666;
+               font-family: Verdana;
+               text-align: center;
+           }
+       </style>
+       </head>
+       <body>
+          
+          <h1>ACTB Connection Portal</h1> 
+          <center>
+              <table>
+                  <tr>
+                      <td>Customer Name</td>
+                      <td><input type="text" placeholder="Enter the customer name" name="custname" pattern="([^\s][a-zA-Z\s]+)" required></td>
+                      </tr>
+                      <tr>
+                          <td>Customer Email</td>
+                          <td><input type="email" placeholder="abc@gmail.com" name="email" required></td>
+                      </tr>
+                      <tr>
+                      <td>Mobile Number</td>
+                      <td><input type="text" placeholder="Enter the Mobile Number" name="mobile" pattern="[7-9][0-9]{9}" required></td>
+                     </tr>
+                     <tr>
+                         <td>Type of Broadband</td>
+                         <td><select name="conntype" id="connectiontype">
+                             <option value="Pre">Pre</option>
+                             <option value="Post">Post</option>
+                         </select></td>
+                     </tr>
+                     <tr>
+                         <td id="scheme">Scheme Name</td>
+                         <td><input type="radio" name="scheme" id="scheme1" value="Local" required>Local
+                         <input type="radio" name="scheme" id="scheme2" value="STD" required>STD
+                         <input type="radio" name="scheme" id="scheme3" value="FullTalkTime" required>FullTalkTime
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>Connection Duration</td>
+                         <td><input type="number" min="1" max="12" name="duration" id="dur" required></td>
+                     </tr>
+                     <tr>
+                         <td><input type="submit" value="Calculate Bill Amount" name="submit" onclick="amount()"></td>
+                         <td><input type="reset" value="Reset" name="clear"></td>
+                     </tr>
+              </table>
+          </center>
+          <div  id="result"></div>
+          <center><p>Rental Cost Table</p></center>
+          <center>
+              <table border="1">
+                  <tr>
+                      <th>Connection Type</th>
+                      <th>Call Limit</th>
+                      <th>Monthly Rental</th>
+                  </tr>
+                  <tr>
+                      <td>Pre</td>
+                      <td>500</td>
+                      <td>75</td>
+                  </tr>
+                  <tr>
+                      <td>Post</td>
+                      <td>Unlimited</td>
+                      <td>150</td>
+                  </tr>
+              </table>
+          </center>
+          <script type="text/javascript">
+              function amount()
+              {
+                  var rent=document.getElementById("connectiontype").value;
+                  var scheme;
+                  if(document.getElementById("scheme1").checked){
+                      scheme=document.getElementById("scheme1").value;
+                  }else if(document.getElementById("scheme2").checked)
+                  {
+                      scheme=document.getElementById("scheme2").value;
+                  }else if(document.getElementById("scheme3").checked)
+                  {
+                      scheme=document.getElementById("scheme3").value;
+                  }
+                  var duration=document.getElementById("dur").value;
+                  var mr;
+                  var cpm;
+                  var tmrc;
+                  if(rent=="Pre")
+                  {
+                      mr=75;
+                  }else{
+                      mr=150;
+                  }
+                  if(scheme=="Local")
+                  {
+                      cpm=200;
+                  }else if(scheme=="STD")
+                  {
+                      cpm=350;
+                  }else if(scheme=="FullTalkTime")
+                  {
+                      cpm=500;
+                  }
+                  tmrc=(duration*cpm)+mr;
+                  document.getElementById("result").innerHTML="The Total Monthly Rental Cost is Rs. "+tmrc;
+              }
+          </script>
+       </body>
+</html>
