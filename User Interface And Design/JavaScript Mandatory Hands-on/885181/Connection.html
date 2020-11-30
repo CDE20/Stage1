@@ -1,0 +1,135 @@
+<html>
+
+    <body >
+    
+        <h1>ACTB Connection Portal</h1>
+        <form>
+        <table>
+            <tr>
+                <td>Customer Name</td>
+                <td><input id="name"  placeholder="Enter the customer name" pattern="[a-zA-Z\s]+"
+                name="custname" required></td>
+            <tr>
+            <tr>
+                <td>Customer Email</td>
+                <td><input id="email" type="email" placeholder="abc@gmail.com" autocomplete="off"
+                name="email" required></td>
+            </tr>
+            <tr>
+                <td>Mobile Number</td>
+                <td><input id="Mobile" type="text" placeholder="Enter the Mobile Number"
+                pattern="[7|8|9]{1}[0-9]{9}"  name="mobile" required></td>
+            </tr>
+            <tr>
+                <td>Type of Broadband</td>
+                <td><select id="connectiontype" name="conntype" required>
+                    <option value="Pre" id="Pre">Pre</option>
+                    <option value="Post" id="Post">Post</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Scheme Name</td>
+                <td><input type="radio" id="scheme1" name="scheme" value="Local">
+                    <label for="scheme">Local</label>
+                    <input type="radio" id="scheme2" name="scheme" value="STD">
+                    <label for="scheme">STD</label>
+                    <input type="radio" id="scheme3" name="scheme" value="FullTalkTime">
+                    <label for="scheme">FullTalkTime</label>
+                </td>
+            </tr> 
+            <tr>
+                <td>Connection Duration</td>
+                <td><input id="duration" type="number" name="duration" min="1" max="12"></td>
+            </tr>
+            <tr>
+                <td><input type="button" id="submit" name="submit" value="Calculate Bill Amount" onclick="calculateBill()"></td>
+                <td><input type="reset" id="reset" name="clear" value="Reset"></td>
+            </tr>
+        </table> 
+        </form>
+        <div id="result"></div>
+        Rental Cost Table
+		<br>
+        <table id="rentalcost">
+            <tr>
+                <th >Connection Type</th>
+                <th>Call Limit</th>
+                <th>Monthly Rental</th>
+            </tr>
+            <tr>
+                <td >Pre</td>
+                <td>500</td>
+                <td >75</td>
+            </tr>
+            <tr>
+                <td >Post</td>
+                <td >Unlimited</td>
+                <td>150</td>
+            </tr>    
+        </table>    
+ 
+    
+    <style>
+    body{
+        background-color: #EED426;
+    }
+    h1{
+        color: #006666;
+        font-family: Verdana;
+		text-align: center;
+    }
+    #rentalcost{
+        
+        border: 1px solid;
+		float: right;
+		text-align: center;
+     
+    }
+</style>
+<script>
+    function calculateBill()
+    {
+        var totalMonthlyRentalCost;
+        var durationValue=document.getElementById("duration").value;
+        var conntypeValue=document.getElementById("connectiontype").value;
+        if(conntypeValue=="Pre")
+        {
+            if(document.getElementById('scheme1').checked)
+            {
+               totalMonthlyRentalCost=(durationValue*200)+75;
+               document.getElementById("result").innerHTML = "The Total Monthly Rental Cost is Rs.  "+totalMonthlyRentalCost;
+            }
+            else if(document.getElementById('scheme2').checked)
+            {
+                totalMonthlyRentalCost=(durationValue*350)+75;
+                document.getElementById("result").innerHTML = "The Total Monthly Rental Cost is Rs. "+totalMonthlyRentalCost;
+            }
+            else if(document.getElementById('scheme3').checked)
+            {
+                totalMonthlyRentalCost=(durationValue*500)+75;
+                document.getElementById("result").innerHTML = "The Total Monthly Rental Cost is Rs. "+totalMonthlyRentalCost;
+            }
+        }
+        else if(conntypeValue=="Post")
+        {
+            if(document.getElementById('scheme1').checked)
+            {
+                totalMonthlyRentalCost=(durationValue*200)+150;
+                document.getElementById("result").innerHTML = "The Total Monthly Rental Cost is Rs. "+totalMonthlyRentalCost;
+            }
+            else if(document.getElementById('scheme2').checked)
+            {
+                totalMonthlyRentalCost=(durationValue*350)+150;
+                document.getElementById("result").innerHTML = "The Total Monthly Rental Cost is Rs. "+totalMonthlyRentalCost;
+            }
+            else if(document.getElementById('scheme3').checked)
+            {
+                totalMonthlyRentalCost=(durationValue*500)+150;
+                document.getElementById("result").innerHTML = "The Total Monthly Rental Cost is Rs. "+totalMonthlyRentalCost;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
