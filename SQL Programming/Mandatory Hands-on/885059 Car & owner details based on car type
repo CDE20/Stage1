@@ -1,0 +1,5 @@
+select c.car_id, c.car_name, o.owner_id
+from cars c join owners o
+on c.owner_id = o.owner_id
+where c.car_type in ('Hatchback', 'SUV')
+order by car_id;
