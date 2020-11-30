@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #EED426}
+                h1{
+                    color: #006666;
+                    font-family: verdana;
+                    text-align: center;
+                }
+                div{
+                    text-align: center;
+                }
+                
+            
+        </style>
+        <script>
+            function TotalRental()
+            {
+               var month=document.getElementById("duration").value;
+                var connect=document.getElementById("connectiontype");
+                var ct=connect.options[connect.selectedIndex].value;
+                var cpm=0;
+                var mrent=0;
+                
+                    if(document.getElementById("scheme1").checked)
+                    {
+                        cpm=200;
+                    }
+                    if(document.getElementById("scheme2").checked)
+                    {
+                      cpm=350;
+                    }
+                    if(document.getElementById("scheme3").checked)
+                    {
+                      cpm=500;
+                    }
+                    if(ct=="Pre")
+                    {
+                        mrent=75;
+                    }
+                    if(ct=="Post")
+                    {
+                        mrent=150;
+                    }
+                var monthrent=((month*cpm)+mrent);
+                document.getElementById("result").innerHTML= "The Total Monthly Rental Cost is Rs. "+monthrent;
+               
+            }
+        </script>
+    </head>
+    <body>
+        <h1>ACTB Connection Portal</h1>
+        <form>
+            Customer Name<input type="text" name="custname" placeholder="Enter the customer name" required><br>
+            Customer Email<input type="email" name="email" placeholder="abc@gmail.com" required><br>
+            Mobile Number<input type="text" name="mobile" placeholder="Enter the Mobile Number" max="10" pattern="[789]{1}[0-9]{9}" required><br>
+            Type of Broadband
+            <select name="conntype" id="connectiontype" value="connectiontype" required>
+                <option id="Pre" value="Pre">Pre</option>
+                <option id="Post" value="Post">Post</option>
+                </select><br>
+                Scheme Name
+                <input type="radio" id="scheme1" name="scheme" value="Local">Local
+                <input type="radio" id="scheme2" name="scheme" value="STD">STD
+                <input type="radio" id="scheme3" name="scheme" value="FullTalkTime">FullTalkTime
+                <br>
+                Connection Duration <input type="number" name="duration" id="duration" min="1" max="12" required><br>
+                <span>
+                    <input type="button" value="Calculate Bill Amount" onclick="TotalRental()" name="submit" >
+                    <button type="Reset" name="clear">Reset</button></span><br>
+                <div id="result" name="result"></div><br> 
+        </form>
+        <table name="Rental Cost Table" border="1" id="rentalcost" >
+            <tr>
+                <th>Connection Type</th>
+                <th>Call Limit</th>
+                <th>Monthly Rental</th>
+            </tr>
+            <tr>
+                <td>Pre</td>
+                <td>500</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>Post</td>
+                <td>unlimited</td>
+                <td>150</td>
+            </tr>
+            
+            
+        </table>
+    </body>
+</html>
