@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <link rel="stylesheet" href="billcalc.css">
+ <script type="text/javascript">
+ function calculateTotalPrice(){
+     var price=document.getElementById("price").value;
+     var quant=document.getElementById("qty").value;
+     if(price>0){
+         document.getElementById("totalprice").innerHTML=price*quant;
+     }
+     return false;
+ }
+         
+     </script>
+ </head>   
+ <body>
+     <h1>Bill Calculator</h1>
+     <form onsubmit="return calculateTotalPrice()">
+     <table>
+         <tr>
+             <td>Product Name</td>
+             <td><input type="text" placeholder="Product Name" id="productName" required></td>
+         </tr>
+         <tr>
+             <td>Product Price in Rs.</td>
+             <td><input type="number" placeholder="Product Price" id="price" required></td>
+         </tr>
+         <tr>
+             <td>Quantity</td>
+             <td><input type="number" placeholder="Enter quantity" id="qty" min="1" required></td>
+         </tr>
+         <tr>
+             <td>Total Price in Rs.</td>
+             <td><output type="text" name="totalprice"  id="totalprice" for="price qty" required></output></td>
+         </tr>
+         <tr>
+             <td colspan="2"><input type="submit" id="submit" name="submit"></td>
+             
+         </tr>
+     </table>
+     </form>
+ </body>
+   
+   
+   
+   
+<!-- Write appropriate and complete  HTML  CODE with proper syntax HERE. Also write approriate code to link billcalc.css file from this file.-->
+    
+    
+    
+    
+    
+    
+    
+    
+</html>
