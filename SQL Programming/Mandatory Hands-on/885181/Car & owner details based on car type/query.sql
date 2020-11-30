@@ -1,0 +1,1 @@
+SELECT c.car_id,c.car_name,o.owner_id from owners o INNER JOIN cars c on o.owner_id=c.owner_id WHERE c.car_type LIKE 'Hatchback' OR c.car_type='SUV' order by c.car_id asc;

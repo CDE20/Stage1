@@ -1,0 +1,1 @@
+select car_id,car_name,car_type from cars where car_name LIKE 'Maruthi%' AND car_type='Sedan' order by car_id asc;
