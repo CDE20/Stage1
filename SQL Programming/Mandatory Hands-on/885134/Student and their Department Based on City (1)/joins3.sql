@@ -1,0 +1,1 @@
+select student_name,department_name from department d,student s where d.department_id=s.department_id and s.city="Coimbatore" order by student_name;
