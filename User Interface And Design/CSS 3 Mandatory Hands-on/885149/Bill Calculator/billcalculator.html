@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="billcalc.css">
+        <script type="text/javascript">
+            function calculateTotalPrice(){
+                var price=document.getElementById("price").value;
+                var quantity=document.getElementById("qty").value;
+                var total=price*quantity;
+                document.getElementById("totalprice").innerHTML=total;
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>
+            Bill Calculator
+            </h1>
+        </header>
+        <section>
+            <form onsubmit="return calculateTotalPrice()">
+                <table>
+                    <tr>
+                        <td>Product Name</td>
+                        <td>
+                            <label for="Product Name"></label>
+                            <input id="productName" type="text" placeholder="Product Name" required="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Product Price in Rs.</td>
+                        <td>
+                            <label for="Product Price in Rs."></label>
+                            <input id="price" type="number" placeholder="Product Price" required="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Quantity
+                        </td>
+                        <td>
+                            <label for="Quantity"></label>
+                            <input id="qty" type="number" placeholder="Enter quantity" required="required">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Total Price in Rs.
+                        </td>
+                        <td>
+                            <label for="Total Price in Rs."></label>
+                            <output id="totalprice" for="price qty" required="required"></output>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <label for="Submit"></label>
+                        <input id="submit" type="submit">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </body>
+   
+   
+   
+   
+<!-- Write appropriate and complete  HTML  CODE with proper syntax HERE. Also write approriate code to link billcalc.css file from this file.-->
+    
+    
+    
+    
+    
+    
+    
+    
+</html>
