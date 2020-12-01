@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+            body{
+                background-color:#eed426;
+            }
+            h1{
+                color:#006666;
+                font-family: verdana;
+                text-align: center;
+            }
+            #rentalcost{
+                border-style: solid;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form onsubmit="return calculateTotalCost()">
+            <h1>ACTB Connection Portal</h1>
+            
+            <label for="custname">Customer Name</label>
+            <input type="text" name="custname" id="custname" placeholder="Enter the customer name" pattern="[a-zA-Z]+" required><br><br>
+            
+            <label for="email">Customer Email</label>
+            <input type="email" name="email" id="email" placeholder="abc@gmail.com" required><br><br>
+            
+            <label for="mobile">Telephone/Mobile Number</label>
+            <input type="text" name="mobile" id="mobile" placeholder="Enter the Mobile Number" pattern="[7-9][0-9]{9}" required><br><br>
+            
+            <label for="conntype">Connection Type</label>
+            <select id="connectiontype" name="conntype">
+                <option value ="Pre">Pre</option>
+                <option value="Post">Post</option>
+                
+            </select><br><br>
+            
+            Scheme Name
+            <input type="radio" id="scheme1" name="scheme" value="Local">
+            <label for="scheme1">Local</label>
+            <input type="radio" id="scheme2" name="scheme" value="STD">
+            <label for="scheme2">STD</label>
+            <input type="radio" id="scheme3" name="scheme" value="FullTalkTime">
+            <label for="scheme3">FullTalkTime</label><br><br>
+            
+            <label for="duration">Customer Duration</label>
+            <input type="number" name="duration" id="duration" min="1" max="12" required><br><br>
+            
+            <input type="submit" name="submit" id="submit" value="Connection Bill Amount">
+            <input type="reset" id="clear" value="Reset" name="clear">
+            
+
+        
+            
+            
+            <div name ="result" id="result"></div>
+             </form>          
+             <p>Rental Cost Table</p>
+            <table id="rentalcost" border>
+                <tr>
+                    <th>Connection Type</th>
+                    <th>Call Limit</th>
+                    <th>Monthly Rental</th>
+                </tr>
+                <tr>
+                    <td>Pre</td>
+                    <td>500</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>Post</td>
+                    <td>Unlimited</td>
+                    <td>150</td>
+                </tr>
+                
+            </table>
+                
+        <script>
+            function calculateTotalCost(){
+                var duration = document.getElementsByName("duration")[0].value;
+                var conntype = document.getElementsByName("conntype")[0].value;
+                var total = 0;
+                if(document.getElementById("scheme1").checked)
+                    total = duration * 200;
+                else if(document.getElementById("scheme2").checked)
+                    total = duration * 350;
+                else if(document.getElementById("scheme3").checked)
+                    total = duration * 500;
+                if(conntype ==  'Pre')
+                    total += 75;
+                else if(conntype == 'Post')
+                    total +=150;
+                    
+                document.getElementsByName("result")[0].innerHTML = "The Total Monthly Rental Cost is Rs. " + total;
+                
+                return false;
+            }
+            
+        </script>    
+           
+        
+        
+    </body>
+    
+    
+    
+</html>
