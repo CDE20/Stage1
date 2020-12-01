@@ -1,0 +1,18 @@
+<html>
+	<head>
+    <script src="script.js" type="text/javascript"> </script>
+  </head>
+  <body> 
+    <!-- Fill code here -->
+    <form>
+    <h2>Feedback for the ART OF LIVING session</h2>
+    <label for="feedback">Enter the Feedback:</label>
+    <textarea id="feedback"></textarea><br>
+    
+    <input type="button" id="create" onclick="addFeedback()" value="Add Feedback"><br><br>
+    <input type="button" id="view" onclick="displayFeedback()" value="View Feedback">
+    
+    </form>
+    <div id="result" border></div>
+  </body>
+</html>
