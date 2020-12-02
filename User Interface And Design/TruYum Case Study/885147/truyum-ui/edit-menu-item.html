@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Menu Item List Customer</title>
+<link rel="stylesheet" href="style/style.css">
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+	<header>
+		truYum <img src="images/img.png">
+		<nav>
+			<a id="a1" href="menu-item-list-admin.html">Menu</a>
+
+		</nav>
+	</header>
+	<h1>Edit Menu Item</h1>
+	<form action="edit-menu-item-status.html">
+		<table>
+			<tr>
+				<th class="col1"><label for="title">Name</label></th>
+			</tr>
+			<tr>
+				<td><input type="text" name="title" id="title"
+					pattern="[A-Za-z\s]{2,65}" required="required"></td>
+			</tr>
+			<tr>
+				<th class="col1"><label for="price">Price(Rs.)</label></th>
+				<th class="col1"><label for="active">Active</label></th>
+				<th class="col1"><label for="dateOfLaunch">Date of Launch</label></th>
+				<th class="col1"><label for="category">Category</label></th>
+			</tr>
+			<tr>
+				<td class="col1"><input type="number" pattern="[0-9]+" id="price"
+					name="price" required="required"></td>
+				<td class="col1"><input type="radio" id="Yes" name="inStock"
+					required="required">Yes <input type="radio" id="No" name="inStock"
+					required="required">No</td>
+				<td class="col1"><input type="date" name="dateOfLaunch" id="dateOfLaunch" min="cr_date()"
+					required="required"></td>
+				<td class="col1"><select id="category" name="category">
+						<option value="Starters">Starters</option>
+						<option value="Main Course">Main Course</option>
+						<option value="Dessert">Dessert</option>
+						<option value="Drinks">Drinks</option>
+				</select></td>
+			</tr>
+			<tr></tr>
+			<tr>
+				<td class="col1"><input type="checkbox" id="freedelivery" name="freedelivery" value="Free Delivery">Free
+					Delivery</td>
+			</tr>
+			<tr>
+				<td><input type="submit" id="submit" name="submit" value="Save"></td>
+			</tr>
+		</table>
+	</form>
+	<footer>Copyright &copy; 2019</footer>
+</body>
+</html>
