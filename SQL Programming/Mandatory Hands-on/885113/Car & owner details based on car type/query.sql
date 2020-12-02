@@ -1,0 +1,1 @@
+select car_id, car_name ,owner_id from CARS where car_type IN("Hatchback","SUV");
