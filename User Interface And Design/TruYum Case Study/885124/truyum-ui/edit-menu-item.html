@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/style.css" type="text/css">
+        <script src="js/val.js">
+        </script>
+    </head>
+    <body>
+        <nav>
+            <a class="links logo" href="#">truYum</a>
+            <a class="links logo" href="#"><img src="images/img.png" width="30" height="30"></a>
+            <div class="rightSection">
+                <a class="links" href="menu-item-list-admin.html">Menu</a>
+            </div>
+        </nav>
+        <h4></h4>
+        <form onsubmit="return check()">
+            <table>
+                <tr>
+                    <td>
+                    <h2 >Edit Menu Items</h2>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="title">Name</label></td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="4"><input type="text" size="90" id="title" name="title" required="required"
+                 pattern="[a-zA-Z]*"></td>
+                </tr>
+                <tr>
+                    <td><label for="price">Price (Rs.)</label></td>
+
+                    <td><label for="inStock">Active</label></td>
+                    <td></td>
+                    <td><label for="dateOfLaunch">Date of Launch</label></td>
+                    <td></td>
+                    <td><label for="category">Category</label></td>
+                </tr>
+
+                <tr>
+                    <td><input type="number" id="price" name="price" required="required"></td>
+
+                    <td><input type="radio" id="yes" name="inStock" value="yes"><label>Yes</label>
+                    <input type="radio" id="no" name="inStock" value="no"><label>No</label></td>
+                    <td></td>
+                    <td><input type="date" id="dateOfLaunch" name="dateOfLaunch" required="required" onchange="fun()"></td>
+                    <td></td>
+                    <td>
+                    <select  id="category" name="category">
+                    <option>Main Course</option>
+                    <option>Starters</option>
+                    <option>Dessert</option>
+                    <option>Drinks</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+
+                <tr>
+                    <td><input type="checkbox"><label>Free Delivery</label>
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td>
+                    <button type="submit" style=" background-color: #1261A0; width: 80px; height: 40px;color:white;" id="sub" name="sub">Save</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <footer>
+        <span>Copyright &copy; 2019
+        </span>
+        </footer>
+        <script type="text/javascript">
+
+        function check()
+        {
+            window.open('edit-menu-item-status.html','_self');
+            return false;
+        }
+        </script>
+    </body>
+</html>
