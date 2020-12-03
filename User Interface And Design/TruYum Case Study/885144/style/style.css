@@ -1,0 +1,122 @@
+@charset "ISO-8859-1";
+
+header {
+	background-color: #315496;
+	font-family: Arial;
+	color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 40px;
+	padding-right: 30px;
+	padding-left: 20px;
+	position: relative;
+}
+
+h1 {
+	font-family: Arial;
+	margin-left: 75px;
+}
+
+table {
+	font-family: Arial;
+	margin-left: 75px;
+}
+
+img {
+	width: 50px;
+	height: 50px;
+}
+
+#a1 {
+	color: white;
+	font-size: 20px;
+}
+
+table {
+	width: 70%;
+}
+th,td{
+	padding:18px;
+}
+
+#carttable,#cartnotif{
+	
+	margin-left:auto;
+	margin-right:auto;
+	width:30%;
+}
+#admintable {
+	width: 70%;
+}
+
+#title{
+	width:300%;
+}
+
+footer {
+	background-color: lightgray;
+	font-family: Arial;
+	padding-top: 25px;
+	padding-bottom: 30px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-left: 20px;
+}
+
+nav {
+	float: right;
+}
+
+.col1 {
+	text-align: left;
+}
+
+.col2 {
+	text-align: right;
+}
+
+.col3 {
+	text-align: center;
+}
+
+.col4 {
+	text-align: center;
+}
+
+.col5 {
+	text-align: center;
+}
+
+.col6 {
+	text-align: center;
+}
+
+.col7 {
+	text-align: center;
+}
+
+input[name="submit"] {
+	background-color: #315496;
+	height: 40px;
+	width: 120px;
+	color: white;
+	font-family: Arial;
+}
+
+p {
+	font-weight: bold;
+	text-align: center;
+	color: gray;
+	font-family: Arial;
+}
+
+#a2 {
+	color: blue;
+}
+
+h3 {
+	font-family: Arial;
+	text-align: center;
+	color: green;
+}
