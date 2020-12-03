@@ -1,0 +1,85 @@
+header {
+	background-color: #0000FF;
+	width: 100%;
+	padding: 0px;
+	color: #FFFFFF;
+}
+#logo-name, #logo-img {
+	margin: 0px;
+	font-size: 25px;
+	margin-left: 80px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#logo-img {
+	height: 50px;
+	width: 50px;
+}
+nav {
+	float: right;
+	margin: 0;
+	overflow: hidden;
+	text-align: center;
+	margin-right: 30px;
+}
+
+nav a {
+	float: left;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+a:hover {
+	background-color: #ddd;
+	color: #000000;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	background-color: #D3D3D3;
+	width: 100%;
+	padding: 8px;
+}
+section#body {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+table {
+	text-align: left;
+	width: 100%;
+}
+tr {
+	margin-top: 20px;
+}
+input[type=text]{
+	width: 92%;
+}
+
+input[type=submit]
+{
+	margin-top: 20px;
+	padding: 20px 40px;
+	background-color: #0000FF;
+	border: none;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+#status {
+	color: #008000;
+	font-weight: bold;
+}
+button {
+	border: none;
+}
+button:hover {
+	cursor: pointer;
+	background-color: #ddd;
+}
+p#notification {
+	color: #808080;
+}

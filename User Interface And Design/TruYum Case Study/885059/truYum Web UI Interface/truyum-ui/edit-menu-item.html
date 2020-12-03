@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style/style.css">
+	</head>
+	<body>
+		<header>
+			<p id="logo-name">truYum</p>
+			<img id="logo-img" src="images/fork.jpeg">
+			<nav>
+				<a href="menu-item-list-admin.html">Menu</a>
+			</nav>
+		</header>
+		<section id="body">
+			<h1>Edit Menu Item</h1>
+			<form onsubmit="return false;">
+				<table>
+					<tr>
+						<th colspan="4"><label for="title">Name</label></th>
+					</tr>
+					<tr>
+						<td colspan="4"><input type="text" id="title" name="title" pattern="[a-zA-Z0-9\s]{2-65}" required="required"></td>
+					</tr>
+					<tr>
+						<th><label for="price">Price (Rs.)</label></th>
+						<th><label for="inStock">Active</label></th>
+						<th><label for="dateOfLaunch">Date of Launch</label></th>
+						<th><label for="category">Category</label></th>
+					</tr>
+					<tr>
+						<td><input type="text" id="price" name="price" required="required"></td>
+						<th>
+							<input type="radio" name="inStock" id="yes">Yes
+							<input type="radio" name="inStock" id="no">No
+						</th>
+						<td>
+							<input type="text" name="dateOfLaunch" id="dateOfLaunch" required="required">
+						</td>
+						<td>
+							<select name="category" id="category">
+								<option>Main Course</option>
+								<option>Starters</option>
+								<option>Dessert</option>
+								<option>Drinks</option>
+								
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th><input type="checkbox" name="freeDelivery" id="freeDelivery">Free Delivery</th>
+					</tr>
+					<tr>
+						<td><input type="submit" value="save" name="submit" onclick="saveData()"></td>
+					</tr>
+					
+				</table>
+			</form>
+		</section>
+		<footer>
+			<p>Copyright &#169; 2019</p>
+		</footer>
+		<script src="js/script.js"></script>
+		<script>
+			//alert();
+			document.getElementById("title").value = data[globalIndex][0];
+			document.getElementById("price").value = data[globalIndex][1];
+			if(data[globalIndex][2] == "Yes") {
+				document.getElementById("yes").checked = true;
+			} else {
+				document.getElementById("no").checked = true;
+			}
+			document.getElementById("dateOfLaunch").value = data[globalIndex][3];
+			document.getElementById("category").value = data[globalIndex][4];
+			if(data[globalIndex][5] == "Yes")
+				document.getElementById("freeDelivery").checked = true;
+				
+			function saveData() {
+				window.open('edit-menu-item-status.html', '_self');
+				
+			}
+		</script>
+	</body>
+</html>
