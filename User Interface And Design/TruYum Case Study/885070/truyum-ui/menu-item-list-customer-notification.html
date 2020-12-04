@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Item List Admin</title>
+    <link rel="stylesheet" href="./css/menu-item-list-customer-notification.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="leftNav">
+                <li class="truyum">truYum</li>
+                <li><img src="./images/fork-spoon.jpeg" alt="fork-spoon"></li>
+            </ul>
+            <ul class="rightNav">
+                <li><a href="./menu-item-list-customer.html">Menu</a></li>
+                <li><a href="./cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Menu Items</h2>
+        <div id="item-added-to-cart"></div>
+        <table>
+            
+            <thead>
+                <th>Name</th>
+                <th>Free Delivery</th>
+                <th>Price</th>
+                <th>Category</th>    
+                <th>Action</th>
+            </thead>
+            <tr>
+               <td>Sandwich</td>
+               <td>Yes</td>
+               <td>Rs. 99.00</td>
+               <td>Main Course</td>
+               <td><a href="" onclick="return itemToCart()">Add to Cart</a></td>
+            </tr>
+            <tr>
+                <td>Burger</td>
+                <td>No</td>
+                <td>Rs. 129.00</td>
+                <td>Main Course</td>
+                <td><a href="" onclick="return itemToCart()">Add to Cart</a></td>
+             </tr>
+             <tr>
+                <td>Pizza</td>
+                <td>No</td>
+                <td>Rs. 149.00</td>
+                <td>Main Course</td>
+                <td><a href="" onclick="return itemToCart()">Add to Cart</a></td>
+             </tr>
+
+        </table>
+    </main>
+    <footer>
+        <span>Copyright &copy; 2020</span>
+    </footer>
+</body>
+</html>

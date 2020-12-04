@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    height: 100px;
+    width: 100%;
+    background-color: #1874CD;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.leftNav{
+    margin: 0;
+    /* padding-top: 20px; */
+    display: inline;
+    
+
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+.leftNav>li{
+    color: white;
+    margin: 50px;
+}
+
+.rightNav{
+    float: right;
+    padding-right: 100px;
+}
+
+.rightNav>li>a{
+    color: white;
+    
+}
+
+.truyum {
+    position: relative;
+    top: -12px;
+    font-size: 25px;
+}
+
+nav {
+    width: 100%;
+}
+
+ul>li{
+    list-style: none;
+    display: inline;
+    
+}
+
+img{
+    height: 40px;
+    width: 40px;
+}
+
+
+main{
+    padding-inline-start: 250px;
+}
+
+td, th{
+    text-align: left;
+    padding: 10px;
+
+}
+
+footer{
+    background-color: gainsboro;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+footer>span{
+    margin: auto 0;
+}
+
+#submit{
+    height: 35px;
+    width: 76px;
+    background-color: blue;
+    color: white;
+}
+
+#edit-menu-status{
+    color: green;
+}

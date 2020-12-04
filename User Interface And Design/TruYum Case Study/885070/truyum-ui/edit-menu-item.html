@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Menu Item</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="leftNav">
+                <li class="truyum">truYum</li>
+                <li><img class="img-fluid" src="./images/fork-spoon.jpeg" alt="fork-spoon"></li>
+            </ul>
+            <ul class="rightNav">
+                <li><a href="./menu-item-list-admin.html">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Edit Menu Item</h2>
+        <form action="./edit-menu-item-status.html">
+            <table>
+                <tr>
+                    <td><label for="title">Name</label></td><br>
+                </tr>
+                <tr>
+                    <td><input type="text" name="title" id="title"></td>
+                </tr>
+                <tr>
+                    <td><label for="price">Price (Rs.)</label></td>
+                    <td><label for="dateOfLaunch">Date of Launch</label></td>
+                    <td><label for="inStock">Active</label></td>
+                    <td><label for="category">Category</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="price" id="price" required></td>
+                    <td><input type="text" name="dateOfLaunch" id="dateOfLaunch"></td>
+                    <td><input type="radio" name="inStock" id="inStock" value="Yes"><label for="inStock">Yes</label><input type="radio" name="inStock" id="inStock" value="No"><label for="inStock">No</label></td>
+                    <td>
+                        <select name="categoty" id="category">
+                            <option value="Main Course">Main Course</option>
+                            <option value="Starters">Starters</option>
+                            <option value="Dessert">Dessert</option>
+                            <option value="Drinks">Drinks</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="freeDelivery" id=""><label for="freeDelivery">Free Delivery</label></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit" id="submit" value="Save"></td>
+                </tr>
+            </table>
+        </form>
+    </main>
+    <footer>
+        <span>Copyright &copy; 2020</span>
+    </footer>
+    <script src="./js/script.js"  type="text/javascript"></script>
+</body>
+</html>

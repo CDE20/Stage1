@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Item List Admin</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="leftNav">
+                <li class="truyum">truYum</li>
+                <li><img src="./images/fork-spoon.jpeg" alt="fork-spoon"></li>
+            </ul>
+            <ul class="rightNav">
+                <li><a href="./menu-item-list-customer.html">Menu</a></li>
+                <li><a href="./cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Cart</h2>
+        <div id="item-removed"></div>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Free Delivery</th>
+                <th>Price</th>
+            </thead>
+            <tr>
+               <td>Sandwich</td>
+               <td>Yes</td>
+               <td>Rs. 99.00</td>
+               <td><a onclick="return itemDeleted()">Delete</a></td>
+            </tr>
+            <tr>
+                <td>Burger</td>
+                <td>No</td>
+                <td>Rs. 129.00</td>
+                <td><a onclick="return itemDeleted()">Delete</a></td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td>Total</td>
+                 <td>Rs. 228.00</td>
+             </tr>
+        </table>
+    </main>
+    <footer>
+        <span>Copyright &copy; 2020</span>
+    </footer>
+    <script src="./js/script.js" type="text/javascript"></script>
+</body>
+</html>
