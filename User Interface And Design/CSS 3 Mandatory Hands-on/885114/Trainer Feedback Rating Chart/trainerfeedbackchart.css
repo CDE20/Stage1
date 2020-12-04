@@ -1,0 +1,78 @@
+ h1{
+    text-align: center;
+    color: #FF00FF;
+    font-style: italic;
+ }
+
+ table{
+
+    text-align: left;
+    margin-left: 35%;
+    background-color: #F0F0F0;
+    
+ }
+ 
+ td{
+    text-align: center;
+    
+    
+ }
+ 
+ caption {
+ 	
+    text-align: left;
+    font-weight: bold;
+ 	
+ }
+ 
+ 
+ .theader {
+ 	background-color: maroon;
+ 	color: white;
+ 	 /* Wrtie code for css values here */ 
+ }
+ 
+ .tr1{
+     
+ 	 /* Wrtie code for css values here */ 
+ 	background-color: #ff0080;
+ 
+     
+ }
+ 
+ .tr2{
+     
+ 	 /* Wrtie code for css values here */ 
+    background-color: cyan;
+     
+ }
+ 
+ #ex1, #vg1{
+     
+ 	 /* Wrtie code for css values here */ 
+    background-color: lime;
+     
+ }
+ 
+ #go1{
+     
+     /* Wrtie code for css values here */ 
+    background-color: yellow;
+     
+ }
+ 
+ #av1{
+     
+ 	 /* Wrtie code for css values here */ 
+    background-color: lightgrey;
+     color: white;
+ }
+ 
+  #ba1{
+      
+    /* Wrtie code for css values here */ 
+        background-color: red;  
+        color: white;
+  }
+
+ 
