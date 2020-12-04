@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="Edit menu item list">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style/style.css" type="text/css">
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="head">
+				truYum <a id="truyum-logo" href="#top"><img src="images/img.png" width="30" height="22"></a>
+				<a id="menu" href="menu-item-list-admin.html">Menu</a>
+			</div>
+		</header>
+		
+		<form id="edit-menu-item">
+			<h1>Edit Menu Item</h1>
+			<label for="title"><b>Name</b></label><br>
+			<input type="text" id="title" name="title" min="2" max="65" required="required"><br><br>
+			<label for="price" id="priceLabel"><b>Price (Rs.)</b></label>
+			<label for="inStock" id="in-stock-label"><b>Active</b></label>
+			<label for="dateOfLaunch" id="date-of-launch-label"><b>Date of Launch</b></label>
+			<label for="category" id="category-label"><b>Category</b></label><br>
+			<input type="text" id="price" name="price" pattern="^[1-9]\d*$" required="required">
+			<input type="radio" id="in-stock-1" name="inStock" value="Yes">
+			<label for="Yes">Yes</label>
+			<input type="radio" id="in-stock-2" name="inStock" value="No">
+			<label for="No">No</label>
+			<input type="text" id="date-of-launch" name="dateOfLaunch" required="required">
+			<select name="category" id="category">
+				<option value="Starters">Starters</option>
+				<option value="Main Course" selected>Main Course</option>
+				<option value="Dessert">Dessert</option>
+				<option value="Drinks">Drinks</option>
+			</select><br><br><br>
+			<input type="checkbox" id="freeDelivery" name="freeDelivery" value="Free Delivery">
+			<label for="freeDelivery"><b>Free Delivery</b></label><br><br><br>
+			<input type="submit" name="submit" id="submit" value="Save" onclick="saveDetails()">
+		</form>
+		
+		<footer>
+			<div id="foot">Copyright &copy; 2019</div>
+		</footer>
+	</body>
+</html>

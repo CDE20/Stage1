@@ -1,0 +1,183 @@
+header {
+	background-color: #19489e;
+	font-family: Arial;
+	color: #FFFFFF;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 30px;
+	position: relative;
+}
+
+#truyum-logo {
+	padding-left: 30px;
+}
+
+#menu {
+	color: #FFFFFF;
+	font-size: 15px;
+	float: right;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	padding-right: 50px;
+}
+
+#menu-cus {
+	color: #FFFFFF;
+	font-size: 15px;
+	float: right;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	padding-right: 100px;
+}
+
+#cart {
+	color: #FFFFFF;
+	font-size: 15px;
+	float: right;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	padding-right: 50px;
+}
+
+.middle {
+	margin-top: 8px;
+	margin-bottom: 268px;
+	margin-left: 110px;
+}
+
+.middle2 {
+	margin-top: 8px;
+	margin-bottom: 314px;
+	margin-left: 110px;
+}
+
+.middle3 {
+	margin-top: 8px;
+	margin-bottom: 273px;
+	margin-left: 110px;
+}
+
+.middle4 {
+	margin-bottom: 290px;
+}
+
+.middle5 {
+	margin-top: 8px;
+	margin-bottom: 272px;
+	margin-left: 230px;
+}
+
+table {        
+	border-collapse: separate;
+    border-spacing: 25px 0;
+	padding-top: 25px;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-size: 18px;
+}
+
+#title1 {
+	margin-left: 130px;
+	padding-top: 45px;
+}
+
+#result {
+	margin-left: 320px;
+	color: #0fbd49;
+}
+
+#col-left {
+	text-align: left;
+	padding: 0 60px;
+}
+
+#col-right {
+	text-align: right;
+}
+
+#col-center {
+	text-align: center;
+}
+
+#edit-menu-item {
+	padding-top: 50px;
+	padding-left: 90px;
+	padding-bottom: 181px;
+}
+
+#title {
+	width: 1110px;
+	color: #808080;
+}
+
+#in-stock-label {
+	padding-left: 260px;
+}
+
+#date-of-launch-label {
+	padding-left: 250px;
+}
+
+#category-label {
+	padding-left: 250px;
+}
+
+#in-stock-1 {
+	margin-left: 155px;
+}
+
+#in-stock-2 {
+	margin-left: 20px;
+}
+
+#date-of-launch {
+	margin-left: 187px;
+}
+
+#category {
+	margin-left: 177px;
+}
+
+#submit {
+	background-color: #00008B;
+	border: none;
+	color: #FFFFFF;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	width: 150px;
+}
+
+#status-form {
+	padding: 80px;
+	padding-bottom: 355px;
+}
+
+#menu-save-message {
+	color: #0fbd49;
+}
+
+#menu-remove-message {
+	color: #0fbd49;
+	margin-left: 200px;
+}
+
+#display-message {
+	color: #808080;
+}
+
+#link {
+	color: #0000FF;
+}
+
+footer {
+	background-color: #D3D3D3;
+	padding-top:10px;
+	padding-bottom:10px;
+}
