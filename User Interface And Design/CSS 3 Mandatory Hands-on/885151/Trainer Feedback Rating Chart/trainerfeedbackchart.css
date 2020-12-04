@@ -1,0 +1,84 @@
+ h1{
+    text-align: center;
+    color: #FF00FF;
+    font-style: italic;
+    
+ }
+
+ table{
+  
+     margin-left: 35%;
+     text-align: left;
+     background-color: #F0F0F0;
+     
+
+ }
+ 
+ td{
+    text-align: center;
+     /* Wrtie code for css values here */ 
+ 
+ }
+ 
+ caption {
+ 	
+ 	 text-align: left;
+ 	 font-weight: bold;
+ 	
+ }
+ 
+ 
+ .theader {
+ 	
+ 	background-color: maroon;
+ 	color: white;
+ 	
+ }
+ 
+ .tr1{
+     
+ 	 background-color:#FF0080;
+ 	 color: black;
+     
+ }
+ 
+ .tr2{
+     
+ 	 background-color: cyan;
+ 	 color: black;
+ 
+     
+ }
+ 
+ #ex1, #vg1{
+     
+ 	 background-color: lime;
+ 	 color: black;
+ 	 
+ 
+     
+ }
+ 
+ #go1{
+     
+     background-color: yellow;
+     color: black;
+ 
+     
+ }
+ 
+ #av1{
+     
+ 	background-color: lightgrey;
+ 	color: white;
+ 
+     
+ }
+ 
+  #ba1{
+      background-color: red;
+      color: white;
+      
+  }
+
+ 
