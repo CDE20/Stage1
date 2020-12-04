@@ -1,0 +1,87 @@
+html{
+    margin:0px;
+}
+header{
+    height: 130px;
+    background-color:rgb(55, 0, 128);
+    color: #ffffff;
+    padding-left: 50px;
+    padding-right: 100px;
+}
+body{
+    margin: 0px;
+}
+.col-2{
+    display: inline;
+
+}
+a{
+    text-decoration: underline;
+    color: #ffffff;
+    
+}
+nav{
+    
+    font-size: 20px;
+    display:inline;
+    float: right;
+    padding-right: 40px;
+}
+ul{
+    list-style-type: none;
+}
+#main{
+    float:center;
+    height: 400px;
+    margin-right:20%;
+    margin-left: 20%;
+}
+form{
+    color:#000000;
+    font-weight: bold;
+}
+#save{
+    background-color: rgb(9, 19, 117);
+    color:#000000;
+    height: 4em;
+    width: 15em;
+}
+#name{
+    width: 100%;
+}
+.menu_edit_form{
+    width: 25%;
+    float: left;
+}
+.saved_message{
+    color: green;
+    font-size: 25px;
+}
+.addedmessage{
+    text-align: center;
+    color: #008000;
+}
+table{
+    width: 100%;
+    text-align: left;
+
+}
+table #productName{
+    width: 30%;
+}
+td a{
+    color:#000000;
+    text-decoration: underline;
+}
+#noItemMessage{
+    color: #808080;
+
+}
+#menulink{
+    color:#0000ff;
+}
+footer{
+    background-color: #778899;
+    padding: 30px 30px 20px 20px;
+    margin: 0;
+}

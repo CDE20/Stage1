@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Menu Items</title>
+        <link rel="stylesheet" href="./style/style.css">
+
+    </head>
+    <body>
+        <header>
+            <ul class="col-2">
+                <li>
+                    <div>
+                    <h1>truYum</h1>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <nav name="navigation"><a href="../menu-item-list-admin.html">Menu</a></nav>
+                    </div>
+                </li>
+            </ul>
+        </header>
+        <div id="main">
+            <div id="pageinfo">
+                <h1>Edit Menu Item</h1>
+            </div>
+            <div>
+                <form>
+                    <label for="Name">Name</label><br>
+                    <input name="title" id="name" type="text" pattern=".*{2-65}" required="required"><br><br>
+                    <div class="menu_edit_form">
+                        <label for="Price">Price</label><br>
+                        <input id="price" name="price" type="number" required="required">
+                    </div>
+                    <div class="menu_edit_form">
+                        <label for="In Status">Active</label><br>
+                        Yes<input name="inStock" type="radio">
+                        No<input name="inStock" type="radio">
+                    </div>
+                    <div class="menu_edit_form">
+                        <label for="Date of Launch">Launch Date</label><br>
+                        <input type="date" name="dateOfLaunch" id="dateOfLaunch" required>
+                    </div>
+                    <div class="menu_edit_form">
+                    <label for="Category">Category</label><br>
+                    <select id="category" title="Select one category" required="required">
+                        <option value="Starters">Starters</option>
+                        <option value="Main Course">Main Course</option>
+                        <option value="Desert">Desert</option>
+                        <option value="Drinks">Drinks</option>
+                    </select>
+                    </div><br><br>
+                    <br>
+                    <label for="Delivery Type"></label>
+                    <input type="checkbox" name="delivery_type" id="delivery_type">Free Delivery<br><br>
+
+                    <button name="save" id="save" type="submit"><a href="./edit-menu-item-status.html">Save</a></button>
+                    </form>
+
+
+                </form>
+            </div>
+        </div>
+        <footer>
+            <h5>Copyright 2019</h5>
+        </footer>
+       
+
+
+    </body>
+</html>
