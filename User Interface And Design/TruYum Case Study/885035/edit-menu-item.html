@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Edit Menu Item</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	
+<body>
+	<header>truYum <img src="images/img.png"/>
+		<nav>
+		<a class="menu-nav"  href="menu-item-list-admin.html">Menu</a>
+		
+		</nav>
+	</header>
+	<div id="menu-title"><h1>Edit Menu Item</h1></div>
+	<form action="edit-menu-item-status.html" onSubmit = "addItem()" >
+		<table id="form-table">
+			<tr><th class="grey"><label for="title">Name</label></th></tr><br>
+			<tr><td colspan="2"><input type="text" id="title" name="title" pattern="[a-zA-Z\s]{2,65}" required=""></td></tr>
+			
+			<tr><th class="grey"><label for="price">Price(Rs.)</label></th>
+				<th class="grey"><label for="inStock">Active</label></th>
+				<th class="grey"><label for="dateOfLaunch">Date of Launch</label></th>
+				<th class="grey"><label for="category">Category</label></th>
+			</tr>
+			<tr>	
+				<td><input type="number" id="price" name="price" required="" pattern="[0-9]+"></td>
+				<td><input type="radio" id="yes" name="inStock" value="yes"><label for="yes">Yes</label>
+					<input type="radio" id="no" name="inStock" value="no"><label for="no">No</label></td>
+				<td><input type="date" id="dateOfLaunch" name="dateOfLaunch" required="" onchange="display()"></td>
+				
+				<td><select name="category" id="category">
+					  <option value="starters">Starters</option>
+					  <option value="maincourse">Main course</option>
+					  <option value="dessert">Dessert</option>
+					  <option value="drinks">Drinks</option>
+					</select>
+				</td>
+			</tr>
+			<tr><td class="grey"><input type="checkbox" name="freeDelivery" id="freeDelivery"><label for="freeDelivery">Free Delivery</label></td>
+			</tr>
+			<tr><td><input type="submit" class="submitButton" name="submit" value="Save"></td></tr>
+		</table>
+	</form>
+	<footer>
+		Copyright &copy; 2019 
+	</footer>
+	<script type="text/javascript" src = "js/Data.js"></script>
+	<script type="text/javascript">
+		console.log(editValue);
+	</script>
+</body>
+</html>

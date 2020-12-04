@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Menu Item List Admin</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+	</head>
+
+<body>
+	<header>truYum <img src="images/img.png"/>
+		<nav>
+		<a class="menu-nav"  href="menu-item-list-admin.html">Menu</a>
+		
+		</nav>
+	</header>
+	<div id="menu-title"><h1>Menu Items</h1></div>
+	<table id="menu">
+	<tbody>
+		<tr><th class="col-1">Name</th><th class="col-2">Price</th><th>Active</th><th>Date of Launch</th><th>Category</th><th>Free Delivery</th><th>Action</th>
+		</tr>
+		
+		</tbody>
+	</table>
+	<footer>
+		Copyright &copy; 2019 
+	</footer>
+	<script type="text/javascript" src = "js/Data.js"></script>
+	<script type="text/javascript" >
+	var menutable = document.getElementById("menu").getElementsByTagName("tbody")[0];
+		for(x in Menu){
+			var newRow = menutable.insertRow();
+			var nameCell = newRow.insertCell();
+			nameCell.className += "col-1"; 
+			nameCell.appendChild(document.createTextNode(Menu[x].name));
+
+			
+
+			var priceCell = newRow.insertCell();
+			priceCell.className += "col-2"; 
+			priceCell.appendChild(document.createTextNode("Rs."+Menu[x].price));
+
+			var activeCell = newRow.insertCell();
+			//deliveryCell.className += "col-2"; 
+			activeCell.appendChild(document.createTextNode(Menu[x].active));
+
+			var dateCell = newRow.insertCell();
+			//deliveryCell.className += "col-2"; 
+			dateCell.appendChild(document.createTextNode(Menu[x].date));
+
+			var categoryCell = newRow.insertCell();
+			//categoryCell.className += "col-2"; 
+			categoryCell.appendChild(document.createTextNode(Menu[x].category));
+
+			var deliveryCell = newRow.insertCell();
+			//deliveryCell.className += "col-2"; 
+			deliveryCell.appendChild(document.createTextNode(Menu[x].freeDelivery));
+
+			var linkCell = newRow.insertCell();
+			var a = document.createElement("a");
+			a.href = "edit-menu-item.html";
+			var link = document.createTextNode("Edit"); 
+			a.title = "Edit";
+			// function(){console.log("hello"); setEditValue(Menu[x].name);}
+			a.id = "editbtn"+Menu[x].id;
+			a.appendChild(link);
+			linkCell.appendChild(a);
+			
+			document.getElementById("editbtn"+Menu[x].id).onclick = function(){console.log("hello"); setEditValue(Menu[x].id);};
+			//Menu[x].name+'</td><td>'+Menu[x].freeDelivery+'</td><td class="col-2">Rs.'+Menu[x].price+'</td><td>'+Menu[x].category+'</td><td>';
+		}
+	</script>
+</body>
+</html>
