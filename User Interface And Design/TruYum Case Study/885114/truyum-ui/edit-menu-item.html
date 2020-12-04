@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>truYum</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1>truYum</h1>
+            <img src="images/truYum1.jpg" height="50" width="50" alt="">
+            <a class="nav-links menu-link" href="menu-item-list-admin.html">Menu</a>
+        </nav>
+    </header>
+    
+    <h1 class="main-header">Edit Menu Item</h1>
+    <form action="edit-menu-item-status.html" onsubmit="">
+        <label for="title">Name</label>
+        <input type="text" name="title" id="title" placeholder="Sandwich" pattern="[A-Za-z]{2,65}" required="required">
+        <br>
+        <div class="container">
+            <div class="col-4 price">
+                <label for="price">Price (Rs.)</label><br>
+                <input type="number" name="price" id="price" placeholder="Price" required="required">
+            </div>
+            <div class="col-4 active">
+                <label for="inStock">Active</label><br>
+                <input type="radio" name="inStock" id="yes">Yes
+                <input type="radio" name="inStock" id="no">No
+            </div>
+            <div class="col-4 date">
+                <label for="dateOfLaunch">Date of Launch</label><br>
+                <input type="date" name="dateOfLaunch" id="dateOfLaunch" required="required">
+            </div>
+
+            <div class="col-4 category">
+                <label for="category">Category</label><br>
+                <select name="category" id="category">
+                    <option value="Starters">Starters</option>
+                    <option value="Main Course">Main Course</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Drinks">Drinks</option>
+                </select>
+            </div>
+
+        </div>
+        <br>
+        <input type="checkbox" name="freeDelivery" id="freeDelivery">
+        <label for="freeDelivery">Free Delivery</label>
+        <br>
+        <input type="submit" name="submit" value="Save" class="btn-save">
+
+    </form>
+
+    
+    <footer>
+        Copyright &copy; 2019
+    </footer>
+</body>
+
+</html>
