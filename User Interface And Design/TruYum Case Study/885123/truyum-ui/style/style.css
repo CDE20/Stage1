@@ -1,0 +1,102 @@
+ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+li{
+	display:inline;
+}
+table{
+	padding-left:100px;
+}
+img{
+	height:5%;
+	width: 5%;
+	padding-left:30px;
+}
+caption{
+	padding-left:100px;
+    text-align:left;
+}
+header{
+	color:#ffffff;
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:20px;
+	padding-right:20px;
+	background-color:#315496;
+}
+footer{
+	background-color:lightgrey;
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:20px;
+	padding-right:20px;
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	
+}
+#title{
+		font-size:30px;
+		text-align:center;
+		padding-bottom:50px;
+}
+.a1{
+	color: white;
+	padding-left:950px;
+	font-size: 20px;
+}
+.a2{
+	color:white;
+	padding-left:40px;
+	font-size:20px;
+}
+.center {
+	text-align:center;
+}
+.right{
+	text-align:right;
+}
+.left{
+	text-align:left;
+}
+#admin{
+	width:80%;
+	margin-top:80px;
+	margin-bottom:50px;
+	margin-left:30px;
+	margin-right:30px;
+}
+#customer{
+	width:80%;
+	margin-top:80px;
+	margin-bottom:50px;
+	margin-left:30px;
+	margin-right:30px;
+}
+#font{
+	font-weight:bold;
+}
+#carttable {
+	width:50%;
+	margin-top:40px;
+	margin-bottom:30px;
+	margin-left:40px;
+	margin-right:40px;
+}
+#color {
+	color:#808080;
+}
+h3{
+	margin-left:150px;
+	color:#3CB371;
+}
+#is{
+	margin-left:150px;
+}
+#submit {
+background-color:#0000ff;
+color:#ffffff;
+}
