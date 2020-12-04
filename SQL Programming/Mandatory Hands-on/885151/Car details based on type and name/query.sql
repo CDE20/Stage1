@@ -1,0 +1,1 @@
+select car_id, car_name, car_type from Cars c where car_name Like 'Maruthi%' and car_type="Sedan" order by car_id;
