@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style\style.css">
+</head>
+<body>
+	<header>truYum <img src="images/spoon.jpeg"/>
+		<nav>
+		<a class="menu-nav"  href="menu-item-list-admin.html">Menu</a>
+		
+		</nav>
+	</header>
+	
+    <h2 class="main-heading"> Edit Menu Item</h2>
+	<form action="edit-menu-item-status.html" method="get">
+	    <table class="edit-table">
+		<tr>
+	   <td colspan="4"><label for="title">Name</label><br>
+	   <input type="text" name="title" id="title" required="required" pattern="[a-zA-Z]{2,65}"></td>
+	   </tr>
+	   <tr>
+	   <td><label for="price">Price(Rs.)</label><br>
+	   <input type="text" name="price" id="price" required="required" pattern="([0-9])+"></td>
+	   <td><label for="inStock">Active</label><br>
+	   <input type="radio" name="inStock" id="inStock1" required="required" value="Yes">Yes
+	   <input type="radio" name="inStock" id="inStock2" required="required" value="No">No</td>
+	   <td><label for="dateOfLaunch">Date of Launch</label><br>
+	   <input type="text" name="dateOfLaunch" id="dateOfLaunch" required="required" onchange="display()"></td>
+	   <td><label for="catogery">Category</label><br>
+	   <input list="dl" name="catogery" id="catogery" required="required">
+	   <datalist id="dl" name="catogery">
+	   <option value="Starters">
+	   <option value="Main Course">
+	   <option value="Dessert">
+	   <option value="Drinks">
+	   </datalist>
+	   </td>
+	   </tr>
+	   <tr>
+	   <td><input type="checkbox" id="freeDelivery" name="freeDelivery" value="yes">Free Delivery</td>
+	   </tr>
+	   <tr>
+	   <td><input type="submit" name="submit" id="submit" value="Save" ></td>
+	   </tr>
+	   </table>
+	</form>
+	<footer>
+		Copyright &#169; 2019 
+	</footer>
+</body>
+</html>
