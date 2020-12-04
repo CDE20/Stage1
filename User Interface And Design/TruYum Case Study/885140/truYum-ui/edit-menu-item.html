@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style/style.css">
+        <script src="script/javascriptFile.js"></script>
+    </head>
+    
+
+    
+    <body>
+        
+        <nav>
+                <span class="truyum">truYum</span> 
+                <span class="image-nav-bar"><img src="images/img.png" width="35" height="35"></span>
+                <a href="menu-item-list-admin.html" class="link">Menu</a>
+        </nav>
+        <div>
+        <form onsubmit="return status()">
+        <p>Edit Menu Item</p>
+            
+            <table>
+                <tr>
+                    <td class="form-field"><label for="name">Name</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="title" id="title" pattern="[a-z A-Z]{2,65}" required></td>
+                </tr>
+                
+                <tr>
+                    <td class="form-field"><label for="price">Price(Rs.)</label></td>
+                    <td><label for="inStock">Active</label></td>
+                    <td><label for="dateOfLaunch">Date of Launch</label></td>
+                    <td><label for="category">Category</label></td>
+                </tr>
+                
+                <tr>
+                <td><input type="text" id="price" pattern="[0-9]+" required></td>
+                <td><input type="radio" value="Yes" id="yes" name="inStock">
+                    <label for="yes">Yes</label>
+                    <input type="radio" value="No" id="no" name="inStock">
+                    <label for="no">No</label></td>
+                <td><input type="date" name="dateOfLaunch" id="dateOfLaunch" required></td>
+                <td><select id="category" name="category">
+                    <option value="mainCourse">Main Course</option>
+                    <option value="starters">Starters</option>
+                    <option value="dessert">Dessert</option>
+                    <option value="drinks">Drinks</option>
+                    
+                    </select></td>
+                
+                
+                
+                </tr>
+                
+                <tr>
+                <td class="form-field"><input type="checkbox" name="freeDelivery" id="freeDelivery" required>
+                <label for="freeDelivery">Free Delivery</label></td>
+                </tr>
+                
+                <tr>
+                    <td class="form-field"><input type="submit" id="submit" name="submit" value="Save"></td>
+                </tr>
+            
+            </table>
+            
+        
+        </form>
+        </div>
+         <footer>
+            <span>Copyright &copy; 2020</span>
+        
+        </footer>
+    </body>
+
+</html>

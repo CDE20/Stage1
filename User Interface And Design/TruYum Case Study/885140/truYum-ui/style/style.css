@@ -1,0 +1,103 @@
+            nav{
+                color: white;
+                overflow: hidden;
+                background-color: #1261A0;
+                padding: 10px;
+                
+            }
+            .link{
+                color: white;
+                font-weight: bold;
+                float: right;
+                text-align: center;
+                padding-top: 10px;
+                padding-right: 30px;
+                
+            }
+            #container{
+                
+                margin: 0 auto;
+    
+            }
+            .truyum{
+                text-align: center;
+                font-size:25px;
+                color: white;
+                font-family: sans-serif;
+                padding-left: 25px;
+            }
+            th{
+                text-align: left;
+                font-family: sans-serif;
+                padding: 10px;
+            }
+            td{
+                text-align: center;
+                font-family: sans-serif;
+                padding: 10px;
+
+                
+            }
+            p{
+                font-size: 30px;
+                margin: 0 auto;
+                padding-top: 45px;
+                font-family: sans-serif;
+            }
+            
+           
+            .image-nav-bar{
+                
+                padding-left: 25px;
+                align-content: center;
+            }
+            footer{
+                
+                background-color: #c0c0c0;
+                height: 20px;
+                position: absolute;
+                bottom: 0;
+                width: 97.5%;
+                padding: 10px;
+                
+            }
+            .first-column{
+    
+                text-align: left;
+            }
+            #submit{
+    
+                background-color: #1261A0;
+                width: 80px;
+                height: 40px;
+                color: white;
+                }
+            .form-field{
+                text-align: left;
+            }
+
+            div{
+                align-content: center;
+                margin: auto;
+                height: 500px;
+                width: 800px;
+            }
+            table{
+                padding-top: 80px;
+            }
+
+            #result{
+    
+                font-size: 15px;
+                color: #7cfc00;
+            }
+            #cart-success{
+                font-size: 20px;
+                color: #7cfc00;
+                text-align: center;
+            }
+            #cart-empty{
+                font-size: 15px;
+                color: #c0c0c0;
+            }
+    
