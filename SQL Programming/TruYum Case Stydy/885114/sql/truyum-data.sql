@@ -150,4 +150,3 @@ where cart_item_id = 3;
 select * from menu_items;
 select * from users;
 select * from cart_items;
-
