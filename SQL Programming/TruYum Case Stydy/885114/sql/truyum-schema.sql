@@ -33,4 +33,3 @@ desc users;
 desc cart_items;
 
 show tables;
-
