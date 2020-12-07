@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+	 <div style="text-align:center">
+	 <form> 
+<h1>Feedback for the ART OF LIVING session</h1>
+    <label>Enter the Feedback:</label>
+    <textarea  rows="3" cols="40" name="feedback" id="feedback" value=""></textarea> 
+<br><br>
+<input type="submit"  id="create" onclick="return addFeedback()" value="Add Feedback">
+<br><br><input type="submit" id="view" onclick="return displayFeedback()" value="View Feedback">
+
+</form>
+</div>
+<div  id="result" style="border: solid black; display: none;width: 30%">
+    
+    <h2>Feedback Details</h2>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
