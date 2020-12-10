@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{background-color: #EED426;}
+            h1{color: #006666; font-family: verdana; text-align: center;}
+            table{border-style: solid; border: 1; float: right;}
+            th, td{border-style: solid; border: 1; text-align: center;}
+        </style>
+        <script>
+            function calculateBillAmount(){
+                var connectionType=document.getElementById("Pre").value;
+                var duration=document.getElementById("duration").value;
+                var scheme;
+                var costPerMonth;
+                var monthlyRental;
+                if(document.getElementById('scheme1').checked) { 
+                    scheme=document.getElementById('scheme1').value;
+                }else if(document.getElementById('scheme2').checked){
+                    scheme=document.getElementById('scheme2').value;
+                }else if(document.getElementById('scheme3').checked){
+                    scheme=document.getElementById('scheme3').value;
+                }
+                if(scheme === "Local"){
+                    costPerMonth=200;
+                }else if(scheme === "STD"){
+                    costPerMonth=350;
+                }else{
+                    costPerMonth=500;
+                }
+                if(connectionType === "Pre"){
+                    monthlyRental=75;
+                }else{
+                    monthlyRental=150;
+                }
+                var totalMRC = ((duration*costPerMonth)+monthlyRental).toString();
+                var billAmount="The Total Monthly Rental Cost is Rs. "+totalMRC;
+                document.getElementById("result").innerHTML=billAmount;
+                return false;
+            }
+            function myFunc(){
+                document.getElementById("myForm").reset();
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <form id="myForm">
+        <div align=center>
+            <h1>ACTB Connection Portal</h1>
+            Customer Name <input type="text" name="custname" id="custname" placeholder="Enter the customer name" required="required"><br>
+            Customer Email <input type="email" name="email" id="email" placeholder="abc@gmail.com" required="required"><br>
+            Mobile Number <input type="text" name="mobile" id="mobile" placeholder="Enter the Mobile Number" pattern="[7-9]{1}[0-9]{9}" required="required"><br>
+            Connection Type <select id="Pre" name="conntype" required="required">
+                <option value="Pre">Pre</option>
+                <option value="Post">Post</option>
+            </select><br>
+            Scheme Name <input type="radio" id="scheme1" name="scheme" value="Local">
+            <label for="local">Local</label>
+            <input type="radio" id="scheme2" name="scheme" value="STD">
+            <label for="std">STD</label>
+            <input type="radio" id="scheme3" name="scheme" value="FullTalkTime">
+            <label for="fulltalktime">FullTalkTime</label><br>
+            Connection Duration <input type="number" name="duration" id="duration" min="1" max="12" required="required"><br>
+            <input type="button" name="submit" value="Calculate Bill Amount" onclick="calculateBillAmount()">
+            <input type="button" name="clear" value="Reset" onclick="myFunc()"><br><br>
+            <div id="result" name="result"></div>
+            <table id="rentalcost">
+                <tr>
+                    <th>Connection Type</th>
+                    <th>Call Limit</th>
+                    <th>Monthly Rental</th>
+                </tr>
+                <tr>
+                    <td>Pre</td>
+                    <td>500</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>Post</td>
+                    <td>Unlimited</td>
+                    <td>150</td>
+                </tr>
+            </table>
+        </div>
+        </form>
+    </body>
+</html>
