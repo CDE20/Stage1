@@ -1,0 +1,82 @@
+ h1{
+    text-align: center;
+    color: #FF00FF;
+    font-style: italic;
+ }
+
+ table{
+  
+     /* Wrtie code for css values here */ 
+     text-align: left;
+     margin-left: 35%;
+     background-color: #F0F0F0;
+     
+ }
+ 
+ td{
+ 
+     /* Wrtie code for css values here */ 
+     text-align: center;
+ }
+ 
+ caption {
+ 	
+ 	 /* Wrtie code for css values here */ 
+ 	 text-align: left;
+ 	 font-weight: bold;
+ 	
+ }
+ 
+ 
+ .theader {
+ 	
+ 	 /* Wrtie code for css values here */ 
+ 	  color: white;
+ 	 background-color: #800000;
+ }
+ 
+ .tr1{
+     
+ 	 /* Wrtie code for css values here */ 
+ 	 background-color: #FF0080;
+ 
+ }
+ 
+ .tr2{
+     
+ 	 /* Wrtie code for css values here */ 
+ 	 background-color: #00FFFF;
+     
+ }
+ 
+ #ex1, #vg1{
+     
+ 	 /* Wrtie code for css values here */ 
+ 	 background-color: #00FF00;
+     
+ }
+ 
+ #go1{
+     
+     /* Wrtie code for css values here */ 
+     background-color: yellow;
+     
+ }
+ 
+ #av1{
+     
+ 	 /* Wrtie code for css values here */ 
+     color: white;
+     background-color: #D3D3D3;
+     
+ }
+ 
+  #ba1{
+      
+    /* Wrtie code for css values here */ 
+    color: white;
+    background-color: red;
+      
+  }
+
+ 
