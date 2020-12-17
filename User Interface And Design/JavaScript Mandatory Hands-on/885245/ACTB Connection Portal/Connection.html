@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: #EED426;
+            }
+            h1
+            {
+                color: #006666;
+                font-family: Verdana;
+                text-align: center;
+            }
+            #heading{
+                margin: 1px;
+            }
+            #name{
+                margin-left: 20px;
+            }
+            #email{
+                margin-left: 20px;
+            }
+            #mobile{
+                margin-left: 20px;
+            }
+            #connectiontype{
+                margin-left: 100px;
+            }
+            #rentalcost{
+                border-style: solid;
+                text-align: center;
+            }
+        </style>
+        </head>
+        <body>
+            <h1>ACTB Connection Portal</h1>
+            <center>
+                <form onsubmit="return false">
+                    Customer name
+                    <input id="name" type="text" name="custname" placeholder="Enter the customer name" required>
+                    <br>
+                    Customer Email 
+                    <input id="email" type="email" name="email" placeholder="abc@gmail.com" required>
+                    <br>
+                    Mobile Number 
+                    <input id="mobile" type="text" name="mobile" pattern="^[7-9]\d{9}" placeholder="Enter the Mobile Number" required>
+                    <br>
+                    Type of Broadband<select name="conntype" id="connectiontype" required>
+                        <option value="Pre" id="Pre">Pre</option>
+                        <option value="Post" id="Post">Post</option>
+                    </select>
+                    <br>
+                    Scheme name
+                    <input id="scheme1" type="radio" name="scheme" value="Local" checked>Local
+                    <input id="scheme2" type="radio" name="scheme" value="STD">STD
+                    <input id="scheme3" type="radio" name="scheme" value="FullTalkTime">FullTalkTime
+                    <br>
+                    Connection Duration
+                    <input type="number" min="1" max="12" id="duration" name="duration" required><br>
+                    <input name="submit" type="button" value="Calculate Bill Amount" onclick="subm()">
+                    <input name="clear" type="button" value="Reset">
+                    </form>
+                    <form>
+                        <div name="result" id="result"></div>
+                        <h5 id="heading">Rental Cost Table</h5>
+                        <table border="1" id="rentalcost">
+                            <tr>
+                                <th>Connection Type</th>
+                                <th>Call Limit</th>
+                                <th>Monthly Rental</th>
+                            </tr>
+                            <tr>
+                                <td>Pre</td>
+                                <td>500</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td>Post</td>
+                                <td>Unlimited</td>
+                                <td>150</td>
+                            </tr>
+                        </table>
+                    </form>
+                    </center>
+        <script>
+            function subm(){
+                var s=document.getElementById("connectiontype").value;
+                var dur=document.getElementById("duration").value;
+                
+                if(s=="Pre" && document.getElementById('scheme1').checked){
+                    var total=(parseInt(document.getElementById("duration").value)*200)+75;
+                    document.getElementById("result").innerHTML="The Total Monthly Rental Cost is Rs. "+total;
+                }
+                if(s=="Pre" && document.getElementById('scheme2').checked){
+                    var total=(parseInt(document.getElementById("duration").value)*350)+75;
+                    document.getElementById("result").innerHTML="The Total Monthly Rental Cost is Rs. "+total;
+                }
+                if(s=="Pre" && document.getElementById('scheme3').checked){
+                    var total=(parseInt(document.getElementById("duration").value)*500)+75; 
+                    document.getElementById("result").innerHTML="The Total Monthly Rental Cost is Rs. "+total;
+                    }
+                if(s=="Post" && document.getElementById('scheme1').checked){
+                    var total=(parseInt(document.getElementById("duration").value)*200)+150;
+                    document.getElementById("result").innerHTML="The Total Monthly Rental Cost is Rs. "+total;
+                }
+                if(s=="Post" && document.getElementById('scheme2').checked){
+                    var total=(parseInt(document.getElementById("duration").value)*350)+150;
+                    document.getElementById("result").innerHTML="The Total Monthly Rental Cost is Rs."+total;
+                }
+                if(s=="Post" && document.getElementById('scheme3').checked){
+                    var total=(parseInt(document.getElementById("duration").value)*500)+150;
+                    document.getElementById("result").innerHTML="The Total Monthly Rental Cost is Rs. "+total;
+                } 
+            }
+        </script>
+    </body>
+</html>
