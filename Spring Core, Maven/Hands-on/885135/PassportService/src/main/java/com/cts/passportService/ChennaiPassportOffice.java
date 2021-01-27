@@ -1,0 +1,31 @@
+package com.cts.passportService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+// Type your code here
+@Component
+public class ChennaiPassportOffice implements HeadPassportOffice{
+
+
+	private Document chennaiDocument;
+	
+	// Type your code here
+	@Autowired
+	public ChennaiPassportOffice(Document chennaiDocument) {
+		super();
+		this.chennaiDocument = chennaiDocument;
+	}
+
+	// Type your code here
+	public void doPhotoVerification(){
+	    System.out.println("Photo verification done using "+chennaiDocument.getIdProof());
+	}
+	
+	public void issuePassport(){
+	    System.out.println("Passport issue is in progress for Joe from Chennai office");
+	}
+
+	
+
+}
