@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+    <bean name="booking" class="com.cts.eezee.model.Booking"> </bean>
+     <bean name="transportService" class="com.cts.eezee.service.TransportService">
+      <property name="vehicle">
+     <bean name="vehicle" class="com.cts.eezee.model.Vehicle">
+      <constructor-arg>
+         <value>Chennai</value>
+      </constructor-arg>
+
+
+ <property name="destinationMap">
+
+
+ <map>
+
+  <entry value="1500" key="Bangalore"/>
+  <entry value="2500" key="Delhi"/>
+  <entry value="2000" key="Mumbai"/>
+  <entry value="1000" key="Hyderabad"/>
+  <entry value="2500" key="Pune"/>
+  </map>
+ </property>
+
+</bean>
+
+</property>
+
+</bean>
+	
+	
+	
+	
+
+</beans>
