@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .form-row {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="navbar-brand">Payroll</div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Goals</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </nav>
+	
+	<div class="container-fluid">
+	<h1>New Employee</h1>
+	<div class="form-row">
+        <div class="col-md-4 form-group">
+            <label>First Name</label>
+            <input class="form-control" type="text"/>
+        </div>
+        <div class="col-md-4 form-group">
+            <label>Middle Name</label>
+            <input class="form-control" type="text"/>
+        </div>
+         <div class="col-md-4 form-group">
+            <label>Last Name</label>
+            <input class="form-control" type="text"/>
+        </div>
+     
+        <div class="col-md-6 form-group">
+            <label>Address Line 1</label>
+            <input class="form-control" type="text"/>
+        </div>
+        <div class="col-md-6 form-group">
+            <label>Address Line 2</label>
+            <input class="form-control" type="text"/>
+        </div>
+        <div class="col-md-6 form-group">
+            <label>Email</label>
+            <input class="form-control" type="email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required/>
+        </div>
+        <div class="col-md-3 form-group">
+            <label>Password</label>
+            <input class="form-control" type="password"/>
+        </div>
+        <div class="col-md-3 form-group">
+            <label>Confirm Password</label>
+            <input class="form-control" type="password"/>
+        </div>
+        <div class="col-md-3 form-group">
+            <label>Department</label><br>
+            <select class="form-control" name="department" id="department">
+            	 <option></option>
+ 				 <option value="Computer">Computer</option>
+ 				 <option value="Mechanical">Mechanical</option>
+  				 <option value="IT">IT</option>
+ 				 <option value="Civil">Civil</option>
+			</select>
+        </div>
+        <div class="col-md-3 form-group">
+            <label>Date of Birth</label>
+            <input type="text" class="control-label" id="dateOfBirth" width="270" required/>
+             <script>
+             $('#dateOfBirth').datepicker({
+                 uiLibrary: 'bootstrap4'
+                 });
+    </script>
+        </div>
+        <div class="col-md-3 form-group">
+            <label>Gender</label><br>
+            <input type="radio" id="male" name="gender" value="male">Male &nbsp;
+			<input type="radio" id="female" name="gender" value="female">Female
+            <br>
+        </div>
+        <div class="col-md-3 form-group">
+            <label>Permanent</label><br>
+            <input type="checkbox"/>
+        </div>
+        </div>
+         <button type="submit" class="btn btn-success mt-3">Save</button>
+    </div>
+   
+</body>
+</html>
