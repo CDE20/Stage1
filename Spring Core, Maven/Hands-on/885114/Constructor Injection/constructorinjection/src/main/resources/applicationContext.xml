@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+ 				
+  <bean id="custObj" class="com.spring.app.Customer">
+  	<property name="custId" value="1"></property>
+  	<property name="custName" value="Atik"></property>
+  	<property name="emailId" value="shaikhatikrajjak@gmail.com"></property>
+  	<property name="contactNo" value="9420626475"></property>
+  </bean>
+  
+  <bean id="memberShip" class="com.spring.app.MemberShip">
+  	<constructor-arg ref="custObj"></constructor-arg>
+  </bean>
+  
+</beans>
